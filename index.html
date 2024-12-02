@@ -40,6 +40,11 @@
         light.position.y = 5;
         scene.add(light);
 
+        const geometry = new THREE.BoxGeometry( 1, 1, 1 );
+        const material = new THREE.MeshBasicMaterial( { color: 0x00ff00 } );
+        const cube = new THREE.Mesh( geometry, material );
+        scene.add( cube );
+
         // create and configure three.js renderer with XR support
         renderer = new THREE.WebGLRenderer({
           antialias: true,
